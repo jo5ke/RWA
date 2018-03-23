@@ -13,7 +13,7 @@
 var path = require("path");
 module.exports = {
   entry: {
-    app: ["./src/index2.js"]
+    app: ["./src/dom.js"]
   },
   output: {
     path: path.resolve(__dirname, "build"),
