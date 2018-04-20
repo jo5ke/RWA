@@ -35,6 +35,7 @@ function mapStateToProps(state) {
 
 function MapDispatchToProps(dispatch){
     return bindActionCreators({
+     //props  :  action   
         select:selectBook,
         brisi:deleteBook,
     },dispatch)
