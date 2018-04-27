@@ -7,3 +7,5 @@ class World extends Component {
         )
     }
 }
+
+export default World
