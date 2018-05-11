@@ -1,0 +1,12 @@
+<div *ngIf="movie != null">  <!-- *ngIf="movie" -->
+  <input [(ngModel)]="movie.title" />
+  <span>{{ movie.rating }}</span>
+  <button (click)="decreaseRating()">-</button>
+  <button (click)="increaseRating()">+</button>
+
+  <div *ngFor="let star of movie; let idx = index">
+    <span *ngIf="idx < star.getRating() ">*</span>
+  </div>
+  
+
+</div>

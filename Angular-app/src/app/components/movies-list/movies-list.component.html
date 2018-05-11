@@ -1,7 +1,13 @@
 <div>
   <ul>
     <li *ngFor="let film of movies">
-          <app-movie [movie]="film"></app-movie>
+          <app-movie 
+            [movie]="film"
+            (selectedEvent)="onSelected($event)"
+            [selected]="film === selectedMovie"
+            ></app-movie>
     </li>
   </ul>
+  <app-movie-details [movie]="selectedMovie"></app-movie-details>
+
 </div>

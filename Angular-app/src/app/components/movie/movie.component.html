@@ -1,5 +1,5 @@
 <div *ngIf="movie != null">
-  <h2 (click)="selectMovie()">
+  <h2 (click)="selectMovie()" [class.selektovan]="selected === true">
     {{ movie.title }}
   </h2>
   <p>{{ movie.rating }} </p> 
