@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'; 
 
 import { AppComponent } from './app.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { MoviesService } from './services/movies.service';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { rootReducer } from './store';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    // StoreModule.forRoot(rootReducer)
+    StoreModule.forRoot(rootReducer),
+    StoreDevtoolsModule
   ],
   providers: [],
   // providers: [

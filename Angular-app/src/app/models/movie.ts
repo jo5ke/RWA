@@ -6,6 +6,7 @@ export class Movie {
     // public awards: string[];
 
     constructor(
+        public id: number,
         public title: string,
         public year: number,
         public rating: number,
