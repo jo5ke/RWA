@@ -11,17 +11,17 @@ export class MoviesListComponent implements OnInit {
   
   public movies: Movie[];
 
-  public selectedMovie: Movie;
+  public selectedMovie: Movie ;
 
   constructor(moviesService: MoviesService) {
     this.movies = moviesService.getAll();
    }
 
   ngOnInit() {
+    this.selectedMovie = this.movies[0];
   }
 
   onSelected(movie: Movie){
-    console.log(movie);
     this.selectedMovie = movie;
     // movie.selected = true;
   }
